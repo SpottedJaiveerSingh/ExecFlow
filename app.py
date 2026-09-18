@@ -212,9 +212,11 @@ def _seed_db_from_data(simulation_date: date):
     It uses the same extraction and reconciliation pipeline and preserves evidence.
     """
     try:
+        print(f"DB seeding: checking DB at runtime; data dir={DATA_DIR}")
         init_db()
         existing = get_all_actions()
         if existing:
+            print("DB seeding: existing rows found, skipping seeding")
             return 0
         all_items: list[ActionItem] = []
         for fp in DATA_DIR.glob("*.txt"):
@@ -241,9 +243,11 @@ def _seed_db_from_data(simulation_date: date):
             )
             saved += 1
         add_audit_log(f"DB seeded: saved {saved} actions from data/")
+        print(f"DB seeded: saved {saved} actions from data/")
         return saved
     except Exception as e:
         add_audit_log(f"DB seed failed: {e}")
+        print(f"DB seed failed: {e}")
         return 0
 
 # Executive name constant
