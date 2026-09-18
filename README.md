@@ -137,4 +137,3 @@ Repo owner: SpottedJaiveerSingh (GitHub: https://github.com/SpottedJaiveerSingh)
 
 ---
 
-If you'd like, I can also add a shorter `CONTRIBUTING.md`, a `CODE_OF_CONDUCT`, or CI integration notes. Let me know which you'd like next.
