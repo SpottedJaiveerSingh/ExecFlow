@@ -4,6 +4,79 @@ ExecFlow is a lightweight, deterministic personal execution assistant designed t
 such as meeting notes, emails, calendar events, and voice notes and produce a constrained, auditable set of
 structured commitments (Commitment text, Owner, Deadline, Evidence).
 
+Live demo: https://execflow.streamlit.app/
+
+Short summary
+--------------
+
+AI Executive Commitment & Action Agent
+
+Problem
+-------
+
+Executives receive commitments and follow-ups through multiple information sources (email, calendar, meetings, voice notes), which makes tracking and accountability hard.
+
+Solution
+--------
+
+ExecFlow extracts, reconciles, and monitors executive commitments across sources and surfaces them in an action-oriented interface.
+
+Features (high level)
+---------------------
+
+- Commitment extraction
+- My Actions (personal ownership view)
+- Waiting on Others (delegation view)
+- Deadline detection
+- Overdue detection
+- Deduplication
+- Ownership ambiguity detection
+- Evidence tracing (stores supporting text spans)
+- Daily brief
+- Natural-language Q&A
+- Audit log
+
+Architecture
+------------
+
+See `docs/architecture.md` for a diagram and detailed architecture notes. The app follows an agentic pipeline (INGEST → UNDERSTAND → EXTRACT → RECONCILE → VALIDATE → STORE → MONITOR → BRIEF → ANSWER).
+
+Tech stack
+----------
+
+- Python
+- Streamlit
+- OpenAI API (optional)
+- SQLite
+- Pydantic
+
+AI usage
+--------
+
+LLM usage in this project is optional and guarded by environment configuration. The extraction pipeline is deterministic by default and uses heuristics and rules to avoid hallucination. When an LLM is configured it is used for optional NLU/summarization only — all ownership and deadline inferences are subject to anti-hallucination rules.
+
+Guardrails
+----------
+
+- Never invent an owner.
+- Never invent a deadline.
+- Preserve evidence for every extracted commitment.
+- Deterministic reconciliation and deduplication to ensure repeatable results.
+
+Limitations
+-----------
+
+- Conservative extraction may miss implied commitments that require extensive world knowledge.
+- The system relies on heuristics for relative-date resolution and may require calibration for other locales/timezones.
+
+Future improvements
+-------------------
+
+- Better multi-lingual parsing and date resolution.
+- Optional human-in-the-loop review workflows.
+- CI/CD deployment scripts and GitHub Actions for automatic releases.
+
+
 This repository contains a Streamlit application that demonstrates a safe, rule-driven extraction pipeline
 that minimizes hallucination and produces repeatable results suitable for programmatic workflows or manual review.
 
