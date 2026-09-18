@@ -249,6 +249,18 @@ def _seed_db_from_data(simulation_date: date):
         add_audit_log(f"DB seed failed: {e}")
         print(f"DB seed failed: {e}")
         return 0
+# Ensure the DB exists and attempt a one-time seed at module import/startup so
+# deployed environments that start from a fresh filesystem show example data.
+# Use today's date for seeding to keep behavior predictable.
+try:
+    init_db()
+    seeded_at_start = _seed_db_from_data(date.today())
+    if seeded_at_start:
+        print(f"Startup DB seeding completed: {seeded_at_start} actions saved")
+    else:
+        print("Startup DB seeding: no actions saved (DB already populated or no data files)")
+except Exception as _e:
+    print(f"Startup DB seeding encountered error: {_e}")
 
 # Executive name constant
 EXECUTIVE_NAME = "Arjun Malhotra"
