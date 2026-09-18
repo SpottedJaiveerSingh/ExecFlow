@@ -202,6 +202,50 @@ def render_agent_steps_html(steps: dict, main: bool = False) -> str:
 # small spacer placeholder (header rendered after sidebar to access sim_date)
 st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
 
+# Use a repository-relative data directory so the app works both locally and when deployed
+DATA_DIR = pathlib.Path(__file__).parent / "data"
+
+
+def _seed_db_from_data(simulation_date: date):
+    """If the DB has no rows, ingest the example data files and store reconciled actions.
+    This is a safe, idempotent seeding step to ensure the deployed app has initial data to show.
+    It uses the same extraction and reconciliation pipeline and preserves evidence.
+    """
+    try:
+        init_db()
+        existing = get_all_actions()
+        if existing:
+            return 0
+        all_items: list[ActionItem] = []
+        for fp in DATA_DIR.glob("*.txt"):
+            content = fp.read_text(encoding="utf-8")
+            source_type = fp.stem
+            items = extract_actions(content, source_type=source_type, simulation_date=simulation_date)
+            for it in items:
+                it.source = source_type
+                it.source_date = _find_date_in_text(content)
+            all_items.extend(items)
+        reconciled = reconcile_actions(all_items)
+        saved = 0
+        for r in reconciled:
+            insert_action(
+                action=r.action or "",
+                owner=r.owner,
+                related_person=r.related_person,
+                deadline=r.deadline,
+                status=r.status,
+                source_type=r.source_type or r.source,
+                source_date=r.source_date,
+                evidence=r.evidence,
+                confidence=r.confidence,
+            )
+            saved += 1
+        add_audit_log(f"DB seeded: saved {saved} actions from data/")
+        return saved
+    except Exception as e:
+        add_audit_log(f"DB seed failed: {e}")
+        return 0
+
 # Executive name constant
 EXECUTIVE_NAME = "Arjun Malhotra"
 
