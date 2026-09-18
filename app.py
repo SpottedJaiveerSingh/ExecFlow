@@ -423,6 +423,11 @@ if page == "Daily Brief":
         st.session_state.run_agent = False
     init_db()  # ensure DB and table exist
     rows = get_all_actions()
+    # If DB is empty on a fresh deploy, seed it from the repo data files so the UI shows content
+    if not rows:
+        seeded = _seed_db_from_data(sim_date)
+        if seeded:
+            rows = get_all_actions()
 
     # derive counts using rules and classifications
     my_actions = []
