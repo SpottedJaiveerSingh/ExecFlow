@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="1200" viewBox="0 0 1000 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style><![CDATA[
+      .header { font: 700 26px/1 'Segoe UI', Roboto, Arial, sans-serif; fill:#cfe8ff }
+      .sub { font: 500 16px/1 'Segoe UI', Roboto, Arial, sans-serif; fill:#9fb9d9 }
+      .card-title { font: 700 20px/1 'Segoe UI', Roboto, Arial, sans-serif; fill:#e6f7ff }
+      .card-bullet { font: 500 15px/1 'Segoe UI', Roboto, Arial, sans-serif; fill:#cfe8ff }
+      .foot { font: 400 13px/1 'Segoe UI', Roboto, Arial, sans-serif; fill:#9fb9d9 }
+    ]]></style>
+
+    <filter id="ds" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+
+    <marker id="arrowDark" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#bcd6e6" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0f1720"/>
+
+  <!-- Title -->
+  <text x="50" y="38" class="header">AI-Powered Personal Commitment &amp; Action Tracking System</text>
+
+  <g transform="translate(40,80)">
+    <!-- Source Inputs (large blue box with inner items) -->
+    <rect x="80" y="0" width="840" height="140" rx="8" ry="8" fill="#0b2130" stroke="#2b6cb0" stroke-width="2" filter="url(#ds)"/>
+    <rect x="92" y="12" width="120" height="28" rx="6" ry="6" fill="#0b2130" stroke="#5aa0e6" stroke-width="1.8"/>
+    <text x="102" y="32" class="card-bullet">Source Inputs</text>
+
+    <!-- inner small pills -->
+    <rect x="220" y="40" width="210" height="28" rx="6" ry="6" fill="#0b2130" stroke="#3f88d8" stroke-width="1.6"/>
+    <text x="265" y="60" class="card-bullet">Emails</text>
+    <rect x="460" y="40" width="210" height="28" rx="6" ry="6" fill="#0b2130" stroke="#3f88d8" stroke-width="1.6"/>
+    <text x="520" y="60" class="card-bullet">Meetings</text>
+    <rect x="220" y="80" width="210" height="28" rx="6" ry="6" fill="#0b2130" stroke="#3f88d8" stroke-width="1.6"/>
+    <text x="275" y="100" class="card-bullet">Calendar</text>
+    <rect x="460" y="80" width="210" height="28" rx="6" ry="6" fill="#0b2130" stroke="#3f88d8" stroke-width="1.6"/>
+    <text x="515" y="100" class="card-bullet">Voice Notes</text>
+
+    <!-- arrow down -->
+    <line x1="500" y1="140" x2="500" y2="200" stroke="#90b7d6" stroke-width="2" marker-end="url(#arrowDark)"/>
+
+    <!-- Data Ingestion (purple rounded) -->
+    <rect x="220" y="200" width="560" height="56" rx="10" ry="10" fill="#24183a" stroke="#6b46c1" stroke-width="2"/>
+    <text x="500" y="235" text-anchor="middle" class="card-title">Data Ingestion</text>
+    <text x="500" y="255" text-anchor="middle" class="card-bullet">Receive • normalize • prepare</text>
+
+    <line x1="500" y1="256" x2="500" y2="320" stroke="#b9a9e6" stroke-width="2" marker-end="url(#arrowDark)"/>
+
+    <!-- LLM Extraction (purple) -->
+    <rect x="220" y="320" width="560" height="100" rx="12" ry="12" fill="#24183a" stroke="#6b46c1" stroke-width="2"/>
+    <text x="500" y="350" text-anchor="middle" class="card-title">LLM Extraction</text>
+    <text x="500" y="374" text-anchor="middle" class="card-bullet">• Commitments  • Owner  • Deadline  • Evidence</text>
+
+    <line x1="500" y1="420" x2="500" y2="480" stroke="#b9a9e6" stroke-width="2" marker-end="url(#arrowDark)"/>
+
+    <!-- Validation Rules (orange) -->
+    <rect x="200" y="480" width="600" height="84" rx="12" ry="12" fill="#2b1e12" stroke="#dd6b20" stroke-width="2"/>
+    <text x="420" y="510" class="card-title" fill="#ffd9b2">Validation Rules</text>
+    <text x="340" y="532" class="card-bullet">• No invented data  • Date validation  • Ownership check</text>
+
+    <line x1="500" y1="564" x2="500" y2="640" stroke="#e5b37a" stroke-width="2" marker-end="url(#arrowDark)"/>
+
+    <!-- Reconciliation & Deduplication (two-line title) -->
+    <rect x="220" y="640" width="560" height="96" rx="12" ry="12" fill="#24183a" stroke="#6b46c1" stroke-width="2"/>
+    <text x="500" y="672" text-anchor="middle" class="card-title">Reconciliation &amp; Deduplication</text>
+    <text x="500" y="694" text-anchor="middle" class="card-bullet">merge repeats • resolve conflicts • reliable record</text>
+
+    <line x1="500" y1="720" x2="500" y2="780" stroke="#b9a9e6" stroke-width="2" marker-end="url(#arrowDark)"/>
+
+    <!-- SQLite Database (green) -->
+    <rect x="220" y="780" width="560" height="92" rx="12" ry="12" fill="#09311f" stroke="#2f855a" stroke-width="2"/>
+    <text x="420" y="812" class="card-title">SQLite Database</text>
+    <text x="340" y="834" class="card-bullet">Validated commitments &amp; trusted system of record</text>
+
+    <!-- Branch to outputs -->
+    <line x1="420" y1="868" x2="220" y2="940" stroke="#9fdad6" stroke-width="2" marker-end="url(#arrowDark)"/>
+    <line x1="500" y1="872" x2="500" y2="960" stroke="#9fdad6" stroke-width="2" marker-end="url(#arrowDark)"/>
+    <line x1="580" y1="868" x2="780" y2="940" stroke="#9fdad6" stroke-width="2" marker-end="url(#arrowDark)"/>
+
+    <!-- Outputs (teal boxes) -->
+    <rect x="140" y="940" width="220" height="72" rx="10" ry="10" fill="#072d2c" stroke="#2c7a7b" stroke-width="2"/>
+    <text x="200" y="975" class="card-title">Daily Brief</text>
+    <text x="160" y="992" class="card-bullet">prioritized actions • highlights</text>
+
+    <rect x="390" y="940" width="220" height="72" rx="10" ry="10" fill="#072d2c" stroke="#2c7a7b" stroke-width="2"/>
+    <text x="450" y="975" class="card-title">Action Center</text>
+    <text x="410" y="992" class="card-bullet">search • filter • confirm</text>
+
+    <rect x="640" y="940" width="220" height="72" rx="10" ry="10" fill="#072d2c" stroke="#2c7a7b" stroke-width="2"/>
+    <text x="700" y="975" class="card-title">Q&amp;A</text>
+    <text x="660" y="992" class="card-bullet">Ask ExecFlow — structured retrieval</text>
+
+    <!-- Footer caption -->
+    <text x="0" y="1110" class="foot">Agentic workflow: INGEST → UNDERSTAND → EXTRACT → RECONCILE → VALIDATE → STORE → MONITOR → BRIEF → ANSWER • LLM used for structured NLU only; rules and reconciliation are deterministic and auditable.</text>
+  </g>
+</svg>

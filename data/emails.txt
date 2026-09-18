@@ -1,0 +1,61 @@
+Emails — Dataset (Threads)
+
+Thread 1 — Subject: Vendor List
+1. Mon 21 Sep, 9:50 AM — From: raghav.sethi@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"Following up from the sync — can you send the updated vendor list today?"
+2. Mon 21 Sep, 5:40 PM — From: arjun.malhotra@veridian-corp.example — To: raghav.sethi@veridian-corp.example
+	"Running behind, will send first thing tomorrow morning instead."
+3. Tue 22 Sep, 9:15 AM — From: raghav.sethi@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"No worries, whenever you get a chance today works."
+4. Tue 22 Sep, 6:30 PM — From: arjun.malhotra@veridian-corp.example — To: raghav.sethi@veridian-corp.example
+	"Sorry, got pulled into board prep — will send by tomorrow (Wednesday) morning for sure."
+5. Wed 23 Sep, 8:45 AM — From: raghav.sethi@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"Just checking — still good for this morning?"
+
+Thread 2 — Subject: Q3 Campaign Deck
+1. Mon 21 Sep, 11:00 AM — From: neha.kapoor@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"Deck’s coming together, still targeting Wednesday for your review."
+2. Tue 22 Sep, 4:15 PM — From: neha.kapoor@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"Heads up — shifting the review to Thursday morning instead of Wednesday, need one more day on the data slides."
+3. Wed 23 Sep, 10:00 AM — From: arjun.malhotra@veridian-corp.example — To: neha.kapoor@veridian-corp.example
+	"Understood, Thursday morning works. What time exactly?"
+4. Wed 23 Sep, 10:20 AM — From: neha.kapoor@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"Let’s say 9:30 AM Thursday, before your board prep block."
+5. Thu 24 Sep, 8:00 AM — From: neha.kapoor@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"Deck is ready, attaching the draft ahead of our 9:30 review."
+
+Thread 3 — Subject: Call Reschedule
+1. Mon 21 Sep, 1:00 PM — From: priya.nair@meridianlogistics.example — To: arjun.malhotra@veridian-corp.example
+	"Our scheduled call this week got bumped from our side — can you propose a new time? We’re flexible Tuesday–Thursday afternoons."
+2. Tue 22 Sep, 3:00 PM — From: arjun.malhotra@veridian-corp.example — To: priya.nair@meridianlogistics.example
+	"Apologies for the delay — how about Wednesday 3:00 PM?"
+3. Tue 22 Sep, 5:45 PM — From: priya.nair@meridianlogistics.example — To: arjun.malhotra@veridian-corp.example
+	"Wednesday 3 PM works on our end, confirmed."
+4. Wed 23 Sep, 1:30 PM — From: priya.nair@meridianlogistics.example — To: arjun.malhotra@veridian-corp.example
+	"Quick check — still on for 3 PM today?"
+5. Wed 23 Sep, 2:00 PM — From: arjun.malhotra@veridian-corp.example — To: priya.nair@meridianlogistics.example
+	"Yes, confirmed, see you at 3."
+
+Thread 4 — Subject: Expense Variance Report
+1. Mon 21 Sep, 2:30 PM — From: divya.rao@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"Starting on the July variance numbers, targeting Thursday morning for board prep as discussed."
+2. Tue 22 Sep, 9:00 AM — From: arjun.malhotra@veridian-corp.example — To: divya.rao@veridian-corp.example
+	"Actually, can I get it by Wednesday evening instead? Want time to review before Thursday."
+3. Tue 22 Sep, 9:40 AM — From: divya.rao@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"Wednesday evening is tight but doable, I’ll prioritize it."
+4. Wed 23 Sep, 6:00 PM — From: divya.rao@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"Report attached, sent as promised."
+5. Wed 23 Sep, 6:10 PM — From: arjun.malhotra@veridian-corp.example — To: divya.rao@veridian-corp.example
+	"Got it, thank you — exactly what I needed before tomorrow."
+
+Thread 5 — Subject: Mumbai Office Lease Renewal
+1. Mon 21 Sep, 10:15 AM — From: facilities@veridian-corp.example — To: All Staff
+	"Reminder: the Mumbai office lease renewal requires an authorized signature by Friday, 25 September."
+2. Tue 22 Sep, 11:00 AM — From: raghav.sethi@veridian-corp.example — To: arjun.malhotra@veridian-corp.example, divya.rao@veridian-corp.example
+	"Following up from the sync — has anyone confirmed who’s signing off on the Mumbai renewal? Don’t think it’s been assigned."
+3. Wed 23 Sep, 9:30 AM — From: divya.rao@veridian-corp.example — To: raghav.sethi@veridian-corp.example, arjun.malhotra@veridian-corp.example
+	"Not on my end — I believe this typically sits with Facilities directly, not us."
+4. Thu 24 Sep, 4:00 PM — From: facilities@veridian-corp.example — To: All Staff
+	"Second reminder: signature is still pending. Deadline is Friday, 25 September, end of day."
+5. Thu 24 Sep, 4:45 PM — From: raghav.sethi@veridian-corp.example — To: arjun.malhotra@veridian-corp.example
+	"This is now one day out and still unowned — can you confirm who’s handling it?"
